@@ -2,6 +2,7 @@ var express = require('express');
 var exphbs  = require('express-handlebars');
 var port = process.env.PORT || 3000
 const cors = require("cors");
+const open = require('open')
 const mercadopago = require("mercadopago");
 mercadopago.configure({
 	access_token: "APP_USR-8709825494258279-092911-227a84b3ec8d8b30fff364888abeb67a-1160706432",
@@ -25,7 +26,6 @@ app.get('/detail', function (req, res) {
 
 app.post("/create_preference", (req, res) => {
     let idNumber = Math.floor(1000 + Math.random() * 9000);
-    console.log(req.body)
 	let preference = {
 		items: [
 			{
@@ -59,6 +59,7 @@ app.post("/create_preference", (req, res) => {
 			"failure": "http://localhost:8080/bad",
 			"pending": "http://localhost:8080/pending"
 		},
+        
         payment_methods: {
             excluded_payment_methods: [
                 {
@@ -74,11 +75,18 @@ app.post("/create_preference", (req, res) => {
         },
 		auto_return: "approved",
 	};
+    (async () => {
 
+     
+        // Opens the URL in the default browser.
+       
+     
+    })();
     mercadopago.preferences
     .create(preference)
     .then(function (response) {
      console.log(response)
+     open(`${response.body.init_point}`);
     })
     .catch(function (error) {
       console.log(error);
