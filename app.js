@@ -86,7 +86,7 @@ app.post("/create_preference", (req, res) => {
     .create(preference)
     .then(function (response) {
      console.log(response)
-     open(`${response.body.init_point}`);
+     res.redirect(response.body.init_point)
     })
     .catch(function (error) {
       console.log(error);
