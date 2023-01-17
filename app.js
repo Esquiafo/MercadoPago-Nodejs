@@ -92,7 +92,8 @@ app.post("/create_preference", (req, res) => {
       console.log(error);
     });
 });
-
+https://www.mercadopago.com.ar/checkout/v1/payment/redirect/c32e933a-71ce-4bea-8b91-2d20d1976f7e/congrats/approved/?preference-id=1160706432-3f0738e5-0c88-47ee-8456-375b77370b34&router-request-id=4b7de3aa-9a6a-432f-9f70-4b17775b19e9&p=a0b4bfcfa1524321f29906d28ffcdcfb
+http://localhost:8080/good?collection_id=53503338167&collection_status=approved&payment_id=53503338167&status=approved&external_reference=null&payment_type=account_money&merchant_order_id=7220713374&preference_id=1160706432-3f0738e5-0c88-47ee-8456-375b77370b34&site_id=MLA&processing_mode=aggregator&merchant_account_id=null
 app.get('/feedback', function (req, res) {
 	res.json({
 		Payment: req.query.payment_id,
