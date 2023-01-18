@@ -28,6 +28,7 @@ app.post("/create_preference", (req, res) => {
     let idNumber = Math.floor(1000 + Math.random() * 9000);
 
 	let preference = {
+        integrator_id: "dev_24c65fb163bf11ea96500242ac130004",
 		items: [
 			{
                 id: idNumber,
@@ -35,7 +36,7 @@ app.post("/create_preference", (req, res) => {
 				unit_price: Number(req.body.price),
 				quantity: Number(parseInt(req.body.unit)),
                 description: "Smartphone",
-                 picture_url: `https://mercadolibre.herokuapp.com${imgUrl}`
+                picture_url: `https://mpjs.onrender.com${imgUrl}`
 			}
 		],
         payer: {
