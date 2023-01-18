@@ -28,6 +28,7 @@ app.post("/create_preference", (req, res) => {
     let idNumber = Math.floor(1000 + Math.random() * 9000);
 
 	let preference = {
+        external_reference: "dev_24c65fb163bf11ea96500242ac130004",
         integrator_id: "dev_24c65fb163bf11ea96500242ac130004",
 		items: [
 			{
