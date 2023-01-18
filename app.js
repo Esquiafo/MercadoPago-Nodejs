@@ -50,10 +50,10 @@ app.post("/create_preference", (req, res) => {
             },
             identification: {
                 type: "DNI",
-                number: "12345678"
+                number: "40677577"
             },
             address: {
-                street_name: "calle falsa",
+                street_name: "Calle Falsa",
                 street_number: 123,
                 zip_code: "1414"
             }
