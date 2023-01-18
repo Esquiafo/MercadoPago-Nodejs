@@ -42,7 +42,7 @@ app.post("/create_preference", (req, res) => {
 			}
 		],
         payer: {
-            name: "Lola",
+            name: "Lalo",
             surname: "Landa",
             email: "test_user_36961754@testuser.com",
             phone: {
