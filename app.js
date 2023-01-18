@@ -59,9 +59,9 @@ app.post("/create_preference", (req, res) => {
             }
         },
 		back_urls: {
-			"success": "http://localhost:8080/good",
-			"failure": "http://localhost:8080/bad",
-			"pending": "http://localhost:8080/pending"
+			"success": "https://mpjs.onrender.com/good",
+			"failure": "https://mpjs.onrender.com/bad",
+			"pending": "https://mpjs.onrender.com/pending"
 		},
         
         payment_methods: {
@@ -79,13 +79,6 @@ app.post("/create_preference", (req, res) => {
         },
 		auto_return: "approved",
 	};
-    (async () => {
-
-     
-        // Opens the URL in the default browser.
-       
-     
-    })();
     mercadopago.preferences
     .create(preference)
     .then(function (response) {
