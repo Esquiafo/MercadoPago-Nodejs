@@ -59,9 +59,9 @@ app.post("/create_preference", (req, res) => {
             }
         },
 		back_urls: {
-			"success": "https://mpjs.onrender.com/good",
-			"failure": "https://mpjs.onrender.com/bad",
-			"pending": "https://mpjs.onrender.com/pending"
+			"success": "https://mpjs.onrender.com/",
+			"failure": "https://mpjs.onrender.com/",
+			"pending": "https://mpjs.onrender.com/"
 		},
         
         payment_methods: {
