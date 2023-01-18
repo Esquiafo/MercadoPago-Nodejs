@@ -29,10 +29,8 @@ app.post("/create_preference", (req, res) => {
 
 	let preference = {
         external_reference: "sorawarcraft@hotmail.com",
-        integrator_id: "dev_24c65fb163bf11ea96500242ac130004",
-        id: "dev_24c65fb163bf11ea96500242ac130004",
-        access_token: "dev_24c65fb163bf11ea96500242ac130004",
-        token: "dev_24c65fb163bf11ea96500242ac130004",
+        preference_id: "dev_24c65fb163bf11ea96500242ac130004",
+
 		items: [
 			{
                 id: idNumber,
