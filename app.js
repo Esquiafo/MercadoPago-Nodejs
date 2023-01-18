@@ -42,8 +42,8 @@ app.post("/create_preference", (req, res) => {
 			}
 		],
         payer: {
-            first_name: "Lola",
-            last_name: "Landa",
+            name: "Lola",
+            surname: "Landa",
             email: "test_user_36961754@testuser.com",
             phone: {
                 area_code: "11",
