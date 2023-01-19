@@ -4,7 +4,7 @@ var port = process.env.PORT || 3000
 
 const mercadopago = require("mercadopago");
 mercadopago.configure({
-	access_token: "APP_USR-8709825494258279-092911-227a84b3ec8d8b30fff364888abeb67a-1160706432",
+	access_token: "dev_24c65fb163bf11ea96500242ac130004",
 });
 var app = express();
  
@@ -29,8 +29,8 @@ app.post("/create_preference", (req, res) => {
 
 	let preference = {
         external_reference: "sorawarcraft@hotmail.com",
-        id: "TEST-11371eb2-7bd2-4301-ae4a-f7dcc9a62219",
-        preference_id: "TEST-11371eb2-7bd2-4301-ae4a-f7dcc9a62219",
+        id: "dev_24c65fb163bf11ea96500242ac130004",
+        preference_id: "DEV_24c65fb163bf11ea96500242ac130004",
 		items: [
 			{
                 id: idNumber,
@@ -64,7 +64,7 @@ app.post("/create_preference", (req, res) => {
 			"failure": "https://mpjs.onrender.com/feedback",
 			"pending": "https://mpjs.onrender.com/feedback"
 		},
-        notification_url: "https://mpjs.onrender.com/detail",
+        notification_url: "https://mpjs.onrender.com/feedback",
         auto_return: "approved",
         payment_methods: {
             excluded_payment_methods: [
@@ -83,8 +83,8 @@ app.post("/create_preference", (req, res) => {
     mercadopago.preferences
     .create(preference)
     .then(function (response) {
-     
-     res.redirect(response.body.init_point)
+    preference_id
+    res.redirect(response.body.init_point)
     })
     .catch(function (error) {
       console.log(error);
