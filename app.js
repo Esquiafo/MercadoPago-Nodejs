@@ -29,7 +29,7 @@ app.post("/create_preference", (req, res) => {
 
 	let preference = {
         external_reference: "sorawarcraft@hotmail.com",
-        preference_id: "dev_24c65fb163bf11ea96500242ac130004",
+        id: "dev_24c65fb163bf11ea96500242ac130004",
 
 		items: [
 			{
@@ -60,9 +60,9 @@ app.post("/create_preference", (req, res) => {
             }
         },
 		back_urls: {
-			"success": "https://mpjs.onrender.com/",
-			"failure": "https://mpjs.onrender.com/",
-			"pending": "https://mpjs.onrender.com/"
+			"success": "https://mpjs.onrender.com/feedback/",
+			"failure": "https://mpjs.onrender.com/feedback/",
+			"pending": "https://mpjs.onrender.com/feedback/"
 		},
         
         payment_methods: {
@@ -94,7 +94,8 @@ app.get('/feedback', function (req, res) {
 	res.json({
 		Payment: req.query.payment_id,
 		Status: req.query.status,
-		MerchantOrder: req.query.merchant_order_id
+		MerchantOrder: req.query.merchant_order_id,
+
 	});
 });
 
