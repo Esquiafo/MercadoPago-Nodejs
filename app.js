@@ -28,7 +28,7 @@ app.post("/create_preference", (req, res) => {
     let idNumber = Math.floor(1000 + Math.random() * 9000);
 
 	let preference = {
-        external_reference: "sorawarcraft@hotmail.com",
+        external_reference: "dev_24c65fb163bf11ea96500242ac130004",
         id: "dev_24c65fb163bf11ea96500242ac130004",
 
 		items: [
@@ -64,7 +64,8 @@ app.post("/create_preference", (req, res) => {
 			"failure": "https://mpjs.onrender.com/feedback/",
 			"pending": "https://mpjs.onrender.com/feedback/"
 		},
-        
+        notification_url: "https://mpjs.onrender.com",
+        auto_return: "approved",
         payment_methods: {
             excluded_payment_methods: [
                 {
@@ -89,14 +90,6 @@ app.post("/create_preference", (req, res) => {
     .catch(function (error) {
       console.log(error);
     });
-});
-app.get('/feedback', function (req, res) {
-	res.json({
-		Payment: req.query.payment_id,
-		Status: req.query.status,
-		MerchantOrder: req.query.merchant_order_id,
-
-	});
 });
 
 app.listen(port);
