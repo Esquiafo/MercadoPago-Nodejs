@@ -28,7 +28,9 @@ app.post("/create_preference", (req, res) => {
     let idNumber = Math.floor(1000 + Math.random() * 9000);
 
 	let preference = {
-
+        external_reference: "sorawarcraft@hotmail.com",
+        id: "TEST-11371eb2-7bd2-4301-ae4a-f7dcc9a62219",
+        preference_id: "TEST-11371eb2-7bd2-4301-ae4a-f7dcc9a62219",
 		items: [
 			{
                 id: idNumber,
