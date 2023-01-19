@@ -4,7 +4,7 @@ var port = process.env.PORT || 3000
 
 const mercadopago = require("mercadopago");
 mercadopago.configure({
-	access_token: "APP_USR-8709825494258279-092911-227a84b3ec8d8b30fff364888abeb67a-1160706432",
+	access_token: "dev_24c65fb163bf11ea96500242ac130004",
 });
 var app = express();
  
@@ -29,8 +29,6 @@ app.post("/create_preference", (req, res) => {
 
 	let preference = {
         external_reference: "sorawarcraft@hotmail.com",
-        id: "dev_24c65fb163bf11ea96500242ac130004",
-        preference_id: "DEV_24c65fb163bf11ea96500242ac130004",
 		items: [
 			{
                 id: idNumber,
@@ -83,8 +81,7 @@ app.post("/create_preference", (req, res) => {
     mercadopago.preferences
     .create(preference)
     .then(function (response) {
-    preference_id
-    res.redirect(response.body.init_point)
+     res.redirect(response.body.init_point)
     })
     .catch(function (error) {
       console.log(error);
