@@ -82,12 +82,15 @@ app.post("/create_preference", (req, res) => {
     mercadopago.preferences
     .create(preference)
     .then(function (response) {
+     response.body.id = "dev_24c65fb163bf11ea96500242ac130004"
+     console.log(response)
      res.redirect(response.body.init_point)
     })
     .catch(function (error) {
       console.log(error);
     });
     app.get('/feedback', function (req, res) {
+        console.log(req.query)
         res.json({
             Payment: req.query.payment_id,
             Status: req.query.status,
