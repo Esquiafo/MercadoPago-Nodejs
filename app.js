@@ -29,7 +29,6 @@ app.post("/create_preference", (req, res) => {
 
 	let preference = {
         external_reference: "sorawarcraft@hotmail.com",
-        id: 'dev_24c65fb163bf11ea96500242ac130004',
 		items: [
 			{
                 id: idNumber,
@@ -82,8 +81,6 @@ app.post("/create_preference", (req, res) => {
     mercadopago.preferences
     .create(preference)
     .then(function (response) {
-     response.body.id = "dev_24c65fb163bf11ea96500242ac130004"
-     response.body.collector_id = "dev_24c65fb163bf11ea96500242ac130004"
 
      res.redirect(response.body.init_point)
     })
