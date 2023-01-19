@@ -5,6 +5,7 @@ var port = process.env.PORT || 3000
 const mercadopago = require("mercadopago");
 mercadopago.configure({
 	access_token: "APP_USR-8709825494258279-092911-227a84b3ec8d8b30fff364888abeb67a-1160706432",
+    integrator_id: "dev_24c65fb163bf11ea96500242ac130004"
 });
 var app = express();
  
