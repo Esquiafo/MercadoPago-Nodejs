@@ -81,7 +81,8 @@ app.post("/create_preference", (req, res) => {
     mercadopago.preferences
     .create(preference)
     .then(function (response) {
-     res.redirect(response.body.init_point)
+        console.log(response)
+     res.redirect(response.body.sandbox_init_point)
     })
     .catch(function (error) {
       console.log(error);
