@@ -1,3 +1,3 @@
-# MercadoPago-Nodejs
+# Certificado SDK Mercadopago Node.js
 
-![insignia](https://user-images.githubusercontent.com/57331052/216398973-2ee5c99e-7f5b-45d8-975b-a9284f7bc68f.svg)
+![Screenshot from 2023-02-02 14-34-49](https://user-images.githubusercontent.com/57331052/216399698-482bf6bb-31da-433a-99a8-2a0d176351fd.png)
